@@ -1,10 +1,18 @@
+var sizeUpSquare = function(array) {
+  return Math.sqrt(array.length);
+};
+
 var messageToArray = function(input) {
   return input.split("");
-}
+};
 
 var encryptInput = function(message) {
   messageArray = messageToArray(message);
   var encryptedOutput = [];
+
+  squareSize = sizeUpSquare(messageArray);
+
+  numberOfCharacters = messageArray.length;
 
   encryptedOutput[0] = messageArray[0];
   encryptedOutput[1] = messageArray[2];
